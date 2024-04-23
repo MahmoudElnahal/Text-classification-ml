@@ -1,0 +1,16 @@
+import requests
+
+# URL of your Flask endpoint
+url = 'http://127.0.0.1:5000/predict'  # Update with your server address
+
+# Text to be classified
+text = "تسريب معلومات سرية تتعلق بمشروع قوانين للأمن القومي"
+
+# Data payload for the request
+payload = {'text': text}
+
+# Send POST request
+response = requests.post(url, json=payload)
+
+# Print the response
+print(response.json())
